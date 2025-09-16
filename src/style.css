@@ -2,22 +2,72 @@ body {
   font-family: Arial, sans-serif;
   margin: 2em;
   background: #fafafa;
+  color: #1f2933;
+}
+
+main.layout {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 h1 {
   color: #346beb;
+  margin: 0;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-weight: 600;
+  color: #102a43;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-row input:focus {
+  outline: none;
+  border-color: #346beb;
+  box-shadow: 0 0 0 3px rgba(52, 107, 235, 0.2);
 }
 
 button {
-  padding: 0.5em 1.5em;
-  font-size: 1em;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
   background: #346beb;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background: #254a99;
+}
+
+.user-message {
+  min-height: 1.5rem;
+  font-weight: 600;
+  color: #346beb;
 }
