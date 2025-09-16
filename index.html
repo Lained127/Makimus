@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Makimus Web App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einfache Eingabe</title>
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-  <h1>Welcome to Makimus Web App!</h1>
-  <p>This is your starter project. Edit <code>src/app.js</code> and <code>src/style.css</code> to begin.</p>
-  <button id="hello-btn">Say Hello</button>
-  <script src="src/app.js"></script>
+  <main class="container">
+    <h1>Einfache Eingabezeile</h1>
+    <p>Gib einen Text in die Eingabezeile ein und klicke auf „Anzeigen“, um ihn unten anzuzeigen.</p>
+
+    <form id="input-form" novalidate>
+      <label class="visually-hidden" for="user-input">Dein Text</label>
+      <input type="text" id="user-input" name="user-input" placeholder="Schreibe etwas..." autocomplete="off">
+      <button type="submit">Anzeigen</button>
+    </form>
+
+    <p id="output" aria-live="polite"></p>
+  </main>
+  <script src="src/app.js" defer></script>
 </body>
 </html>
