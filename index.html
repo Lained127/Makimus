@@ -6,11 +6,27 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-  <h1>Welcome to Makimus Web App!</h1>
-  <p>This is your starter project. Edit <code>src/app.js</code> and <code>src/style.css</code> to begin.</p>
-  <label for="user-input">Gib deinen Text ein:</label>
-  <input id="user-input" type="text" placeholder="Dein Text...">
-  <button id="hello-btn">Say Hello</button>
+  <main class="layout">
+    <h1>Welcome to Makimus Web App!</h1>
+    <p>This is your starter project. Edit <code>src/app.js</code> and <code>src/style.css</code> to begin.</p>
+
+    <form id="greeting-form" class="input-form">
+      <label class="input-label" for="user-input">Gib deinen Text ein:</label>
+      <div class="input-row">
+        <input
+          id="user-input"
+          name="user-input"
+          type="text"
+          placeholder="Dein Text..."
+          autocomplete="off"
+        >
+        <button type="submit" id="hello-btn">Sag Hallo</button>
+      </div>
+    </form>
+
+    <p id="user-message" class="user-message" aria-live="polite"></p>
+  </main>
+
   <script src="src/app.js"></script>
 </body>
 </html>
